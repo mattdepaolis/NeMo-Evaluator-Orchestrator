@@ -241,6 +241,8 @@ Run from the NeMo-Evaluator-Orchestrator root directory:
 nemo-run
 ```
 
+![nemo-run terminal output](res/nemo-run.png)
+
 **Enhanced Features:**
 - **API Key Prompting**: If benchmarks require OpenAI API keys (e.g., `simple_evals.math_test_500`), you'll be prompted interactively. Press Enter to skip.
 - **Dataset Loading Visibility**: Real-time progress indicators (📥) when datasets are being downloaded and cached
@@ -287,6 +289,9 @@ nemo-status
 ### View Results
 
 - **MLflow UI**: http://127.0.0.1:5000 (navigate to "llm-evaluation" experiment)
+
+![MLflow UI showing evaluation results](res/mflow.png)
+
 - **Local Outputs**: `output/eval_<timestamp>/`
 - **Aggregate Report**: `nemo-aggregate`
 
