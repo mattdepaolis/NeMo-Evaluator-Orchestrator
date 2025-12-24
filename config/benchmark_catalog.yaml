@@ -1,0 +1,1103 @@
+version: '1.0'
+total_benchmarks: 336
+harnesses:
+  lm-evaluation-harness:
+    container: nvcr.io/nvidia/eval-factory/lm-evaluation-harness:25.11
+    category: Language Models
+    task_count: 125
+    tasks:
+    - name: adlr_agieval_en_cot
+      full_name: adlr_agieval_en_cot
+      description: Version of the AGIEval-EN-CoT ...
+    - name: adlr_arc_challenge_llama_25_shot
+      full_name: adlr_arc_challenge_llama_25_shot
+      description: ARC-Challenge-Llama version us...
+    - name: adlr_commonsense_qa_7_shot
+      full_name: adlr_commonsense_qa_7_shot
+      description: CommonsenseQA version used by ...
+    - name: adlr_global_mmlu_lite_5_shot
+      full_name: adlr_global_mmlu_lite_5_shot
+      description: Global-MMLU subset (8 language...
+    - name: adlr_gpqa_diamond_cot_5_shot
+      full_name: adlr_gpqa_diamond_cot_5_shot
+      description: Version of the GPQA-Diamond-Co...
+    - name: adlr_gsm8k_cot_8_shot
+      full_name: adlr_gsm8k_cot_8_shot
+      description: GSM8K-CoT version used by NVID...
+    - name: adlr_humaneval_greedy
+      full_name: adlr_humaneval_greedy
+      description: HumanEval Greedy version used ...
+    - name: adlr_humaneval_sampled
+      full_name: adlr_humaneval_sampled
+      description: HumanEval Sampled version used...
+    - name: adlr_math_500_4_shot_sampled
+      full_name: adlr_math_500_4_shot_sampled
+      description: MATH-500 Sampled version used ...
+    - name: adlr_mbpp_sanitized_3_shot_greedy
+      full_name: adlr_mbpp_sanitized_3_shot_greedy
+      description: MBPP Greedy version used by NV...
+    - name: adlr_mbpp_sanitized_3_shot_sampled
+      full_name: adlr_mbpp_sanitized_3_shot_sampled
+      description: MBPP Sampled version used by N...
+    - name: adlr_mgsm_native_cot_8_shot
+      full_name: adlr_mgsm_native_cot_8_shot
+      description: MGSM native CoT subset (6 lang...
+    - name: adlr_minerva_math_nemo_4_shot
+      full_name: adlr_minerva_math_nemo_4_shot
+      description: Minerva-Math version used by N...
+    - name: adlr_mmlu
+      full_name: adlr_mmlu
+      description: MMLU version used by NVIDIA Ap...
+    - name: adlr_mmlu_pro_5_shot_base
+      full_name: adlr_mmlu_pro_5_shot_base
+      description: MMLU-Pro 5-shot base version u...
+    - name: adlr_race
+      full_name: adlr_race
+      description: RACE version used by NVIDIA Ap...
+    - name: adlr_truthfulqa_mc2
+      full_name: adlr_truthfulqa_mc2
+      description: TruthfulQA-MC2 version used by...
+    - name: adlr_winogrande_5_shot
+      full_name: adlr_winogrande_5_shot
+      description: Winogrande version used by NVI...
+    - name: agieval
+      full_name: agieval
+      description: AGIEval - A Human-Centric Benc...
+    - name: arc_challenge
+      full_name: arc_challenge
+      description: The ARC challenge dataset cons...
+    - name: arc_challenge_chat
+      full_name: arc_challenge_chat
+      description: '- The ARC challenge dataset co...'
+    - name: arc_multilingual
+      full_name: arc_multilingual
+      description: The multilingual versions of t...
+    - name: bbh
+      full_name: bbh
+      description: The BIG-Bench Hard (BBH) bench...
+    - name: bbh_instruct
+      full_name: bbh_instruct
+      description: '- The BIG-Bench Hard (BBH) ben...'
+    - name: bbq
+      full_name: bbq
+      description: The BBQ (Bias Benchmark for QA...
+    - name: commonsense_qa
+      full_name: commonsense_qa
+      description: '- CommonsenseQA is a multiple-...'
+    - name: frames_naive
+      full_name: frames_naive
+      description: Frames Naive uses the prompt a...
+    - name: frames_naive_with_links
+      full_name: frames_naive_with_links
+      description: Frames Naive with Links provid...
+    - name: frames_oracle
+      full_name: frames_oracle
+      description: Frames Oracle (long context) p...
+    - name: global_mmlu
+      full_name: global_mmlu
+      description: '- Global-MMLU-Lite is a balanc...'
+    - name: global_mmlu_ar
+      full_name: global_mmlu_ar
+      description: '- Global-MMLU-Lite is a balanc...'
+    - name: global_mmlu_bn
+      full_name: global_mmlu_bn
+      description: '- Global-MMLU-Lite is a balanc...'
+    - name: global_mmlu_de
+      full_name: global_mmlu_de
+      description: '- Global-MMLU-Lite is a balanc...'
+    - name: global_mmlu_en
+      full_name: global_mmlu_en
+      description: '- Global-MMLU-Lite is a balanc...'
+    - name: global_mmlu_es
+      full_name: global_mmlu_es
+      description: '- Global-MMLU-Lite is a balanc...'
+    - name: global_mmlu_fr
+      full_name: global_mmlu_fr
+      description: '- Global-MMLU-Lite is a balanc...'
+    - name: global_mmlu_full
+      full_name: global_mmlu_full
+      description: Global-MMLU is a multilingual ...
+    - name: global_mmlu_full_am
+      full_name: global_mmlu_full_am
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_ar
+      full_name: global_mmlu_full_ar
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_bn
+      full_name: global_mmlu_full_bn
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_cs
+      full_name: global_mmlu_full_cs
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_de
+      full_name: global_mmlu_full_de
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_el
+      full_name: global_mmlu_full_el
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_en
+      full_name: global_mmlu_full_en
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_es
+      full_name: global_mmlu_full_es
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_fa
+      full_name: global_mmlu_full_fa
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_fil
+      full_name: global_mmlu_full_fil
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_fr
+      full_name: global_mmlu_full_fr
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_ha
+      full_name: global_mmlu_full_ha
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_he
+      full_name: global_mmlu_full_he
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_hi
+      full_name: global_mmlu_full_hi
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_id
+      full_name: global_mmlu_full_id
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_ig
+      full_name: global_mmlu_full_ig
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_it
+      full_name: global_mmlu_full_it
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_ja
+      full_name: global_mmlu_full_ja
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_ko
+      full_name: global_mmlu_full_ko
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_ky
+      full_name: global_mmlu_full_ky
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_lt
+      full_name: global_mmlu_full_lt
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_mg
+      full_name: global_mmlu_full_mg
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_ms
+      full_name: global_mmlu_full_ms
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_ne
+      full_name: global_mmlu_full_ne
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_nl
+      full_name: global_mmlu_full_nl
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_ny
+      full_name: global_mmlu_full_ny
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_pl
+      full_name: global_mmlu_full_pl
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_pt
+      full_name: global_mmlu_full_pt
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_ro
+      full_name: global_mmlu_full_ro
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_ru
+      full_name: global_mmlu_full_ru
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_si
+      full_name: global_mmlu_full_si
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_sn
+      full_name: global_mmlu_full_sn
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_so
+      full_name: global_mmlu_full_so
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_sr
+      full_name: global_mmlu_full_sr
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_sv
+      full_name: global_mmlu_full_sv
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_sw
+      full_name: global_mmlu_full_sw
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_te
+      full_name: global_mmlu_full_te
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_tr
+      full_name: global_mmlu_full_tr
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_uk
+      full_name: global_mmlu_full_uk
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_vi
+      full_name: global_mmlu_full_vi
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_yo
+      full_name: global_mmlu_full_yo
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_full_zh
+      full_name: global_mmlu_full_zh
+      description: '- Global-MMLU is a multilingua...'
+    - name: global_mmlu_hi
+      full_name: global_mmlu_hi
+      description: '- Global-MMLU-Lite is a balanc...'
+    - name: global_mmlu_id
+      full_name: global_mmlu_id
+      description: '- Global-MMLU-Lite is a balanc...'
+    - name: global_mmlu_it
+      full_name: global_mmlu_it
+      description: '- Global-MMLU-Lite is a balanc...'
+    - name: global_mmlu_ja
+      full_name: global_mmlu_ja
+      description: '- Global-MMLU-Lite is a balanc...'
+    - name: global_mmlu_ko
+      full_name: global_mmlu_ko
+      description: '- Global-MMLU-Lite is a balanc...'
+    - name: global_mmlu_pt
+      full_name: global_mmlu_pt
+      description: '- Global-MMLU-Lite is a balanc...'
+    - name: global_mmlu_sw
+      full_name: global_mmlu_sw
+      description: '- Global-MMLU-Lite is a balanc...'
+    - name: global_mmlu_yo
+      full_name: global_mmlu_yo
+      description: '- Global-MMLU-Lite is a balanc...'
+    - name: global_mmlu_zh
+      full_name: global_mmlu_zh
+      description: '- Global-MMLU-Lite is a balanc...'
+    - name: gpqa
+      full_name: gpqa
+      description: The GPQA (Graduate-Level Googl...
+    - name: gpqa_diamond_cot
+      full_name: gpqa_diamond_cot
+      description: '- The GPQA (Graduate-Level Goo...'
+    - name: gsm8k
+      full_name: gsm8k
+      description: The GSM8K benchmark evaluates ...
+    - name: gsm8k_cot_instruct
+      full_name: gsm8k_cot_instruct
+      description: '- The GSM8K benchmark evaluate...'
+    - name: gsm8k_cot_llama
+      full_name: gsm8k_cot_llama
+      description: '- The GSM8K benchmark evaluate...'
+    - name: gsm8k_cot_zeroshot
+      full_name: gsm8k_cot_zeroshot
+      description: '- The GSM8K benchmark evaluate...'
+    - name: gsm8k_cot_zeroshot_llama
+      full_name: gsm8k_cot_zeroshot_llama
+      description: '- The GSM8K benchmark evaluate...'
+    - name: hellaswag
+      full_name: hellaswag
+      description: The HellaSwag benchmark tests ...
+    - name: hellaswag_multilingual
+      full_name: hellaswag_multilingual
+      description: The multilingual versions of t...
+    - name: humaneval_instruct
+      full_name: humaneval_instruct
+      description: '- The HumanEval benchmark meas...'
+    - name: ifeval
+      full_name: ifeval
+      description: IFEval is a dataset designed t...
+    - name: m_mmlu_id_str
+      full_name: m_mmlu_id_str
+      description: '- The MMLU (Massive Multitask ...'
+    - name: mbpp_plus
+      full_name: mbpp_plus
+      description: MBPP EvalPlus is an extension ...
+    - name: mgsm
+      full_name: mgsm
+      description: '- The Multilingual Grade Schoo...'
+    - name: mgsm_cot
+      full_name: mgsm_cot
+      description: '- The Multilingual Grade Schoo...'
+    - name: mmlu
+      full_name: mmlu
+      description: '- The MMLU (Massive Multitask ...'
+    - name: mmlu_cot_0_shot_chat
+      full_name: mmlu_cot_0_shot_chat
+      description: '- The MMLU (Massive Multitask ...'
+    - name: mmlu_instruct
+      full_name: mmlu_instruct
+      description: '- The MMLU (Massive Multitask ...'
+    - name: mmlu_logits
+      full_name: mmlu_logits
+      description: '- The MMLU (Massive Multitask ...'
+    - name: mmlu_pro
+      full_name: mmlu_pro
+      description: MMLU-Pro is a refined version ...
+    - name: mmlu_pro_instruct
+      full_name: mmlu_pro_instruct
+      description: '- MMLU-Pro is a refined versio...'
+    - name: mmlu_prox
+      full_name: mmlu_prox
+      description: A Multilingual Benchmark for A...
+    - name: mmlu_prox_de
+      full_name: mmlu_prox_de
+      description: A Multilingual Benchmark for A...
+    - name: mmlu_prox_es
+      full_name: mmlu_prox_es
+      description: A Multilingual Benchmark for A...
+    - name: mmlu_prox_fr
+      full_name: mmlu_prox_fr
+      description: A Multilingual Benchmark for A...
+    - name: mmlu_prox_it
+      full_name: mmlu_prox_it
+      description: A Multilingual Benchmark for A...
+    - name: mmlu_prox_ja
+      full_name: mmlu_prox_ja
+      description: A Multilingual Benchmark for A...
+    - name: mmlu_redux
+      full_name: mmlu_redux
+      description: MMLU-Redux is a subset of 3,00...
+    - name: mmlu_redux_instruct
+      full_name: mmlu_redux_instruct
+      description: '- MMLU-Redux is a subset of 3,...'
+    - name: musr
+      full_name: musr
+      description: The MuSR (Multistep Soft Reaso...
+    - name: openbookqa
+      full_name: openbookqa
+      description: '- OpenBookQA is a question-ans...'
+    - name: piqa
+      full_name: piqa
+      description: '- Physical Interaction: Questi...'
+    - name: social_iqa
+      full_name: social_iqa
+      description: '- Social IQa contains 38,000 m...'
+    - name: truthfulqa
+      full_name: truthfulqa
+      description: '- The TruthfulQA benchmark mea...'
+    - name: wikilingua
+      full_name: wikilingua
+      description: '- The WikiLingua benchmark is ...'
+    - name: winogrande
+      full_name: winogrande
+      description: WinoGrande is a collection of ...
+    - name: '124'
+      full_name: '124'
+      description: ''
+  mtbench:
+    container: nvcr.io/nvidia/eval-factory/mtbench:25.11
+    category: Language Models
+    task_count: 3
+    tasks:
+    - name: mtbench
+      full_name: mtbench
+      description: Standard MT-Bench
+    - name: mtbench-cor1
+      full_name: mtbench-cor1
+      description: Corrected MT-Bench
+    - name: '2'
+      full_name: '2'
+      description: ''
+  ifbench:
+    container: nvcr.io/nvidia/eval-factory/ifbench:25.11
+    category: Specialized Tools
+    task_count: 3
+    tasks:
+    - name: ifbench
+      full_name: ifbench
+      description: IFBench with vanilla settings
+    - name: ifbench_aa_v2
+      full_name: ifbench_aa_v2
+      description: IFBench - params aligned with ...
+    - name: '2'
+      full_name: '2'
+      description: ''
+  simple_evals:
+    container: nvcr.io/nvidia/eval-factory/simple-evals:25.11
+    category: Language Models
+    task_count: 87
+    tasks:
+    - name: AA_AIME_2024
+      full_name: AA_AIME_2024
+      description: AIME 2024 questions, math, usi...
+    - name: AA_math_test_500
+      full_name: AA_math_test_500
+      description: Open Ai math test 500, using A...
+    - name: AIME_2024
+      full_name: AIME_2024
+      description: AIME 2024 questions, math
+    - name: AIME_2025
+      full_name: AIME_2025
+      description: AIME 2025 questions, math
+    - name: AIME_2025_aa_v2
+      full_name: AIME_2025_aa_v2
+      description: AIME 2025 questions, math - pa...
+    - name: aime_2024_nemo
+      full_name: aime_2024_nemo
+      description: AIME 2024 questions, math, usi...
+    - name: aime_2025_nemo
+      full_name: aime_2025_nemo
+      description: AIME 2025 questions, math, usi...
+    - name: browsecomp
+      full_name: browsecomp
+      description: BrowseComp is a benchmark for ...
+    - name: gpqa_diamond
+      full_name: gpqa_diamond
+      description: gpqa_diamond 0-shot CoT
+    - name: gpqa_diamond_aa_v2
+      full_name: gpqa_diamond_aa_v2
+      description: gpqa_diamond questions with cu...
+    - name: gpqa_diamond_aa_v2_llama_4
+      full_name: gpqa_diamond_aa_v2_llama_4
+      description: gpqa_diamond questions with cu...
+    - name: gpqa_diamond_nemo
+      full_name: gpqa_diamond_nemo
+      description: gpqa_diamond questions, reason...
+    - name: gpqa_extended
+      full_name: gpqa_extended
+      description: gpqa_extended 0-shot CoT
+    - name: gpqa_main
+      full_name: gpqa_main
+      description: gpqa_main 0-shot CoT
+    - name: healthbench
+      full_name: healthbench
+      description: HealthBench is an open-source ...
+    - name: healthbench_consensus
+      full_name: healthbench_consensus
+      description: HealthBench is an open-source ...
+    - name: healthbench_hard
+      full_name: healthbench_hard
+      description: HealthBench is an open-source ...
+    - name: humaneval
+      full_name: humaneval
+      description: HumanEval evaluates the perfor...
+    - name: humanevalplus
+      full_name: humanevalplus
+      description: HumanEvalPlus is a dataset of ...
+    - name: math_test_500
+      full_name: math_test_500
+      description: Open AI math test 500
+    - name: math_test_500_nemo
+      full_name: math_test_500_nemo
+      description: math_test_500 questions, math,...
+    - name: mgsm
+      full_name: mgsm
+      description: MGSM is a benchmark of grade-s...
+    - name: mgsm_aa_v2
+      full_name: mgsm_aa_v2
+      description: MGSM is a benchmark of grade-s...
+    - name: mmlu
+      full_name: mmlu
+      description: MMLU 0-shot CoT
+    - name: mmlu_am
+      full_name: mmlu_am
+      description: Global-MMLU 0-shot CoT in Amha...
+    - name: mmlu_ar
+      full_name: mmlu_ar
+      description: Global-MMLU 0-shot CoT in Arab...
+    - name: mmlu_ar-lite
+      full_name: mmlu_ar-lite
+      description: Global-MMLU-Lite 0-shot CoT in...
+    - name: mmlu_bn
+      full_name: mmlu_bn
+      description: Global-MMLU 0-shot CoT in Beng...
+    - name: mmlu_bn-lite
+      full_name: mmlu_bn-lite
+      description: Global-MMLU-Lite 0-shot CoT in...
+    - name: mmlu_cs
+      full_name: mmlu_cs
+      description: Global-MMLU 0-shot CoT in Czec...
+    - name: mmlu_de
+      full_name: mmlu_de
+      description: Global-MMLU 0-shot CoT in Germ...
+    - name: mmlu_de-lite
+      full_name: mmlu_de-lite
+      description: Global-MMLU-Lite 0-shot CoT in...
+    - name: mmlu_el
+      full_name: mmlu_el
+      description: Global-MMLU 0-shot CoT in Gree...
+    - name: mmlu_en
+      full_name: mmlu_en
+      description: Global-MMLU 0-shot CoT in Engl...
+    - name: mmlu_en-lite
+      full_name: mmlu_en-lite
+      description: Global-MMLU-Lite 0-shot CoT in...
+    - name: mmlu_es
+      full_name: mmlu_es
+      description: Global-MMLU 0-shot CoT in Span...
+    - name: mmlu_es-lite
+      full_name: mmlu_es-lite
+      description: Global-MMLU-Lite 0-shot CoT in...
+    - name: mmlu_fa
+      full_name: mmlu_fa
+      description: Global-MMLU 0-shot CoT in Pers...
+    - name: mmlu_fil
+      full_name: mmlu_fil
+      description: Global-MMLU 0-shot CoT in Fili...
+    - name: mmlu_fr
+      full_name: mmlu_fr
+      description: Global-MMLU 0-shot CoT in Fren...
+    - name: mmlu_fr-lite
+      full_name: mmlu_fr-lite
+      description: Global-MMLU-Lite 0-shot CoT in...
+    - name: mmlu_ha
+      full_name: mmlu_ha
+      description: Global-MMLU 0-shot CoT in Haus...
+    - name: mmlu_he
+      full_name: mmlu_he
+      description: Global-MMLU 0-shot CoT in Hebr...
+    - name: mmlu_hi
+      full_name: mmlu_hi
+      description: Global-MMLU 0-shot CoT in Hind...
+    - name: mmlu_hi-lite
+      full_name: mmlu_hi-lite
+      description: Global-MMLU-Lite 0-shot CoT in...
+    - name: mmlu_id
+      full_name: mmlu_id
+      description: Global-MMLU 0-shot CoT in Indo...
+    - name: mmlu_id-lite
+      full_name: mmlu_id-lite
+      description: Global-MMLU-Lite 0-shot CoT in...
+    - name: mmlu_ig
+      full_name: mmlu_ig
+      description: Global-MMLU 0-shot CoT in Igbo...
+    - name: mmlu_it
+      full_name: mmlu_it
+      description: Global-MMLU 0-shot CoT in Ital...
+    - name: mmlu_it-lite
+      full_name: mmlu_it-lite
+      description: Global-MMLU-Lite 0-shot CoT in...
+    - name: mmlu_ja
+      full_name: mmlu_ja
+      description: Global-MMLU 0-shot CoT in Japa...
+    - name: mmlu_ja-lite
+      full_name: mmlu_ja-lite
+      description: Global-MMLU-Lite 0-shot CoT in...
+    - name: mmlu_ko
+      full_name: mmlu_ko
+      description: Global-MMLU 0-shot CoT in Kore...
+    - name: mmlu_ko-lite
+      full_name: mmlu_ko-lite
+      description: Global-MMLU-Lite 0-shot CoT in...
+    - name: mmlu_ky
+      full_name: mmlu_ky
+      description: Global-MMLU 0-shot CoT in Kyrg...
+    - name: mmlu_llama_4
+      full_name: mmlu_llama_4
+      description: MMLU questions with custom reg...
+    - name: mmlu_lt
+      full_name: mmlu_lt
+      description: Global-MMLU 0-shot CoT in Lith...
+    - name: mmlu_mg
+      full_name: mmlu_mg
+      description: Global-MMLU 0-shot CoT in Mala...
+    - name: mmlu_ms
+      full_name: mmlu_ms
+      description: Global-MMLU 0-shot CoT in Mala...
+    - name: mmlu_my-lite
+      full_name: mmlu_my-lite
+      description: Global-MMLU-Lite 0-shot CoT in...
+    - name: mmlu_ne
+      full_name: mmlu_ne
+      description: Global-MMLU 0-shot CoT in Nepa...
+    - name: mmlu_nl
+      full_name: mmlu_nl
+      description: Global-MMLU 0-shot CoT in Dutc...
+    - name: mmlu_ny
+      full_name: mmlu_ny
+      description: Global-MMLU 0-shot CoT in Nyan...
+    - name: mmlu_pl
+      full_name: mmlu_pl
+      description: Global-MMLU 0-shot CoT in Poli...
+    - name: mmlu_pro
+      full_name: mmlu_pro
+      description: MMLU-Pro dataset is a more rob...
+    - name: mmlu_pro_aa_v2
+      full_name: mmlu_pro_aa_v2
+      description: MMLU-Pro - params aligned with...
+    - name: mmlu_pro_llama_4
+      full_name: mmlu_pro_llama_4
+      description: MMLU-Pro questions with custom...
+    - name: mmlu_pt
+      full_name: mmlu_pt
+      description: Global-MMLU 0-shot CoT in Port...
+    - name: mmlu_pt-lite
+      full_name: mmlu_pt-lite
+      description: Global-MMLU-Lite 0-shot CoT in...
+    - name: mmlu_ro
+      full_name: mmlu_ro
+      description: Global-MMLU 0-shot CoT in Roma...
+    - name: mmlu_ru
+      full_name: mmlu_ru
+      description: Global-MMLU 0-shot CoT in Russ...
+    - name: mmlu_si
+      full_name: mmlu_si
+      description: Global-MMLU 0-shot CoT in Sinh...
+    - name: mmlu_sn
+      full_name: mmlu_sn
+      description: Global-MMLU 0-shot CoT in Shon...
+    - name: mmlu_so
+      full_name: mmlu_so
+      description: Global-MMLU 0-shot CoT in Soma...
+    - name: mmlu_sr
+      full_name: mmlu_sr
+      description: Global-MMLU 0-shot CoT in Serb...
+    - name: mmlu_sv
+      full_name: mmlu_sv
+      description: Global-MMLU 0-shot CoT in Swed...
+    - name: mmlu_sw
+      full_name: mmlu_sw
+      description: Global-MMLU 0-shot CoT in Swah...
+    - name: mmlu_sw-lite
+      full_name: mmlu_sw-lite
+      description: Global-MMLU-Lite 0-shot CoT in...
+    - name: mmlu_te
+      full_name: mmlu_te
+      description: Global-MMLU 0-shot CoT in Telu...
+    - name: mmlu_tr
+      full_name: mmlu_tr
+      description: Global-MMLU 0-shot CoT in Turk...
+    - name: mmlu_uk
+      full_name: mmlu_uk
+      description: Global-MMLU 0-shot CoT in Ukra...
+    - name: mmlu_vi
+      full_name: mmlu_vi
+      description: Global-MMLU 0-shot CoT in Viet...
+    - name: mmlu_yo
+      full_name: mmlu_yo
+      description: Global-MMLU 0-shot CoT in Yoru...
+    - name: mmlu_yo-lite
+      full_name: mmlu_yo-lite
+      description: Global-MMLU-Lite 0-shot CoT in...
+    - name: mmlu_zh-lite
+      full_name: mmlu_zh-lite
+      description: Global-MMLU-Lite 0-shot CoT in...
+    - name: simpleqa
+      full_name: simpleqa
+      description: A factuality benchmark called ...
+    - name: '86'
+      full_name: '86'
+      description: ''
+  bigcode-evaluation-harness:
+    container: nvcr.io/nvidia/eval-factory/bigcode-evaluation-harness:25.11
+    category: Code Generation
+    task_count: 26
+    tasks:
+    - name: humaneval
+      full_name: humaneval
+      description: HumanEval is used to measure f...
+    - name: humaneval_instruct
+      full_name: humaneval_instruct
+      description: InstructHumanEval is a modifie...
+    - name: humanevalplus
+      full_name: humanevalplus
+      description: HumanEvalPlus is a modified ve...
+    - name: mbpp
+      full_name: mbpp
+      description: MBPP consists of Python progra...
+    - name: mbppplus
+      full_name: mbppplus
+      description: MBPP+ is a modified version of...
+    - name: mbppplus_nemo
+      full_name: mbppplus_nemo
+      description: MBPP+NeMo is a modified versio...
+    - name: multiple-cpp
+      full_name: multiple-cpp
+      description: MultiPL-E is a suite of coding...
+    - name: multiple-cs
+      full_name: multiple-cs
+      description: MultiPL-E is a suite of coding...
+    - name: multiple-d
+      full_name: multiple-d
+      description: MultiPL-E is a suite of coding...
+    - name: multiple-go
+      full_name: multiple-go
+      description: MultiPL-E is a suite of coding...
+    - name: multiple-java
+      full_name: multiple-java
+      description: MultiPL-E is a suite of coding...
+    - name: multiple-jl
+      full_name: multiple-jl
+      description: MultiPL-E is a suite of coding...
+    - name: multiple-js
+      full_name: multiple-js
+      description: MultiPL-E is a suite of coding...
+    - name: multiple-lua
+      full_name: multiple-lua
+      description: MultiPL-E is a suite of coding...
+    - name: multiple-php
+      full_name: multiple-php
+      description: MultiPL-E is a suite of coding...
+    - name: multiple-pl
+      full_name: multiple-pl
+      description: MultiPL-E is a suite of coding...
+    - name: multiple-py
+      full_name: multiple-py
+      description: MultiPL-E is a suite of coding...
+    - name: multiple-r
+      full_name: multiple-r
+      description: MultiPL-E is a suite of coding...
+    - name: multiple-rb
+      full_name: multiple-rb
+      description: MultiPL-E is a suite of coding...
+    - name: multiple-rkt
+      full_name: multiple-rkt
+      description: MultiPL-E is a suite of coding...
+    - name: multiple-rs
+      full_name: multiple-rs
+      description: MultiPL-E is a suite of coding...
+    - name: multiple-scala
+      full_name: multiple-scala
+      description: MultiPL-E is a suite of coding...
+    - name: multiple-sh
+      full_name: multiple-sh
+      description: MultiPL-E is a suite of coding...
+    - name: multiple-swift
+      full_name: multiple-swift
+      description: MultiPL-E is a suite of coding...
+    - name: multiple-ts
+      full_name: multiple-ts
+      description: MultiPL-E is a suite of coding...
+    - name: '25'
+      full_name: '25'
+      description: ''
+  livecodebench:
+    container: nvcr.io/nvidia/eval-factory/livecodebench:25.11
+    category: Code Generation
+    task_count: 15
+    tasks:
+    - name: codeexecution_v2
+      full_name: codeexecution_v2
+      description: “Execute” a program on an inpu...
+    - name: codeexecution_v2_cot
+      full_name: codeexecution_v2_cot
+      description: “CoT. Execute” a program on an...
+    - name: codegeneration_notfast
+      full_name: codegeneration_notfast
+      description: Not fast version of code gener...
+    - name: codegeneration_release_latest
+      full_name: codegeneration_release_latest
+      description: Code generation latest version
+    - name: codegeneration_release_v1
+      full_name: codegeneration_release_v1
+      description: The initial release of the dat...
+    - name: codegeneration_release_v2
+      full_name: codegeneration_release_v2
+      description: The updated release of the dat...
+    - name: codegeneration_release_v3
+      full_name: codegeneration_release_v3
+      description: The updated release of the dat...
+    - name: codegeneration_release_v4
+      full_name: codegeneration_release_v4
+      description: The updated release of the dat...
+    - name: codegeneration_release_v5
+      full_name: codegeneration_release_v5
+      description: The updated release of the dat...
+    - name: codegeneration_release_v6
+      full_name: codegeneration_release_v6
+      description: The updated release of the dat...
+    - name: livecodebench_0724_0125
+      full_name: livecodebench_0724_0125
+      description: '- Code generation evaluating c...'
+    - name: livecodebench_0824_0225
+      full_name: livecodebench_0824_0225
+      description: '[''Code generation evaluating code comprehension ability. The
+        model is given a program and an input, and the output should be the result.'',
+        ''The data period and sampling parameters used by NeMo Alignment team.'']'
+    - name: livecodebench_aa_v2
+      full_name: livecodebench_aa_v2
+      description: '- Code generation evaluating c...'
+    - name: testoutputprediction
+      full_name: testoutputprediction
+      description: Solve the natural language tas...
+    - name: '14'
+      full_name: '14'
+      description: ''
+  scicode:
+    container: nvcr.io/nvidia/eval-factory/scicode:25.11
+    category: Code Generation
+    task_count: 4
+    tasks:
+    - name: scicode
+      full_name: scicode
+      description: '- SciCode is a challenging ben...'
+    - name: scicode_aa_v2
+      full_name: scicode_aa_v2
+      description: '- SciCode is a challenging ben...'
+    - name: scicode_background
+      full_name: scicode_background
+      description: '- SciCode is a challenging ben...'
+    - name: '3'
+      full_name: '3'
+      description: ''
+  hle:
+    container: nvcr.io/nvidia/eval-factory/hle:25.11
+    category: Code Generation
+    task_count: 3
+    tasks:
+    - name: hle
+      full_name: hle
+      description: Text-only questions from Human...
+    - name: hle_aa_v2
+      full_name: hle_aa_v2
+      description: Text-only questions from Human...
+    - name: '2'
+      full_name: '2'
+      description: ''
+  bfcl:
+    container: nvcr.io/nvidia/eval-factory/bfcl:25.11
+    category: Code Generation
+    task_count: 7
+    tasks:
+    - name: bfclv2
+      full_name: bfclv2
+      description: BFCL v2 with Single-turn, Live...
+    - name: bfclv2_ast
+      full_name: bfclv2_ast
+      description: BFCL v2 with Single-turn, Live...
+    - name: bfclv2_ast_prompting
+      full_name: bfclv2_ast_prompting
+      description: BFCL v2 with Single-turn, Live...
+    - name: bfclv3
+      full_name: bfclv3
+      description: BFCL v3 with Single-turn and M...
+    - name: bfclv3_ast
+      full_name: bfclv3_ast
+      description: BFCL v3 with Single-turn and M...
+    - name: bfclv3_ast_prompting
+      full_name: bfclv3_ast_prompting
+      description: BFCL v3 with Single-turn and M...
+    - name: '6'
+      full_name: '6'
+      description: ''
+  profbench:
+    container: nvcr.io/nvidia/eval-factory/profbench:25.11
+    category: Specialized Tools
+    task_count: 3
+    tasks:
+    - name: llm_judge
+      full_name: llm_judge
+      description: Run LLM judge on provided Prof...
+    - name: report_generation
+      full_name: report_generation
+      description: Generate professional reports ...
+    - name: '2'
+      full_name: '2'
+      description: ''
+  vlmevalkit:
+    container: nvcr.io/nvidia/eval-factory/vlmevalkit:25.11
+    category: Vision-Language
+    task_count: 8
+    tasks:
+    - name: ai2d_judge
+      full_name: ai2d_judge
+      description: A benchmark for evaluating dia...
+    - name: chartqa
+      full_name: chartqa
+      description: A Benchmark for Question Answe...
+    - name: mathvista-mini
+      full_name: mathvista-mini
+      description: Evaluating Math Reasoning in V...
+    - name: mmmu_judge
+      full_name: mmmu_judge
+      description: A benchmark for evaluating mul...
+    - name: ocr_reasoning
+      full_name: ocr_reasoning
+      description: Comprehensive benchmark of 1,0...
+    - name: ocrbench
+      full_name: ocrbench
+      description: Comprehensive evaluation bench...
+    - name: slidevqa
+      full_name: slidevqa
+      description: Evaluates ability to answer qu...
+    - name: '7'
+      full_name: '7'
+      description: ''
+  garak:
+    container: nvcr.io/nvidia/eval-factory/garak:25.11
+    category: Safety & Security
+    task_count: 2
+    tasks:
+    - name: garak
+      full_name: garak
+      description: Task for running the default s...
+    - name: '1'
+      full_name: '1'
+      description: ''
+  nemo_skills:
+    container: nvcr.io/nvidia/eval-factory/nemo_skills:25.11
+    category: Specialized Tools
+    task_count: 14
+    tasks:
+    - name: ns_aa_lcr
+      full_name: ns_aa_lcr
+      description: AA-LCR
+    - name: ns_aime2024
+      full_name: ns_aime2024
+      description: AIME2024
+    - name: ns_aime2025
+      full_name: ns_aime2025
+      description: AIME2025
+    - name: ns_bfcl_v3
+      full_name: ns_bfcl_v3
+      description: BFCLv3
+    - name: ns_bfcl_v4
+      full_name: ns_bfcl_v4
+      description: BFCLv4
+    - name: ns_gpqa
+      full_name: ns_gpqa
+      description: GPQA Diamond
+    - name: ns_hle
+      full_name: ns_hle
+      description: HumanityLastExam
+    - name: ns_ifbench
+      full_name: ns_ifbench
+      description: IFBench - Instruction Followin...
+    - name: ns_livecodebench
+      full_name: ns_livecodebench
+      description: LiveCodeBench
+    - name: ns_mmlu
+      full_name: ns_mmlu
+      description: MMLU
+    - name: ns_mmlu_pro
+      full_name: ns_mmlu_pro
+      description: MMLU-PRO
+    - name: ns_ruler
+      full_name: ns_ruler
+      description: RULER - Long Context Understan...
+    - name: ns_scicode
+      full_name: ns_scicode
+      description: SciCode
+    - name: '13'
+      full_name: '13'
+      description: ''
+  safety_eval:
+    container: nvcr.io/nvidia/eval-factory/safety-harness:25.11
+    category: Safety & Security
+    task_count: 4
+    tasks:
+    - name: aegis_v2
+      full_name: aegis_v2
+      description: Aegis V2 without evaluating re...
+    - name: aegis_v2_reasoning
+      full_name: aegis_v2_reasoning
+      description: Aegis V2 with evaluating reaso...
+    - name: wildguard
+      full_name: wildguard
+      description: Wildguard
+    - name: '3'
+      full_name: '3'
+      description: ''
+  helm:
+    container: nvcr.io/nvidia/eval-factory/helm:25.11
+    category: Language Models
+    task_count: 16
+    tasks:
+    - name: aci_bench
+      full_name: aci_bench
+      description: Extract and structure informat...
+    - name: ehr_sql
+      full_name: ehr_sql
+      description: Given a natural language instr...
+    - name: head_qa
+      full_name: head_qa
+      description: A collection of biomedical mul...
+    - name: med_dialog_healthcaremagic
+      full_name: med_dialog_healthcaremagic
+      description: Generate summaries of doctor-p...
+    - name: med_dialog_icliniq
+      full_name: med_dialog_icliniq
+      description: Generate summaries of doctor-p...
+    - name: medbullets
+      full_name: medbullets
+      description: A USMLE-style medical question...
+    - name: medcalc_bench
+      full_name: medcalc_bench
+      description: A dataset which consists of a ...
+    - name: medec
+      full_name: medec
+      description: A dataset containing medical n...
+    - name: medhallu
+      full_name: medhallu
+      description: A dataset of PubMed articles a...
+    - name: medi_qa
+      full_name: medi_qa
+      description: Retrieve and rank answers base...
+    - name: medication_qa
+      full_name: medication_qa
+      description: Answer consumer medication-rel...
+    - name: mtsamples_procedures
+      full_name: mtsamples_procedures
+      description: Document and extract informati...
+    - name: mtsamples_replicate
+      full_name: mtsamples_replicate
+      description: Generate treatment plans based...
+    - name: pubmed_qa
+      full_name: pubmed_qa
+      description: A dataset that provides PubMed...
+    - name: race_based_med
+      full_name: race_based_med
+      description: A collection of LLM outputs in...
+    - name: '15'
+      full_name: '15'
+      description: ''
+  tooltalk:
+    container: nvcr.io/nvidia/eval-factory/tooltalk:25.11
+    category: Specialized Tools
+    task_count: 2
+    tasks:
+    - name: tooltalk
+      full_name: tooltalk
+      description: ToolTalk task with default set...
+    - name: '1'
+      full_name: '1'
+      description: ''
+  genai_perf_eval:
+    container: nvcr.io/nvidia/eval-factory/genai-perf:25.11
+    category: Efficiency
+    task_count: 3
+    tasks:
+    - name: genai_perf_generation
+      full_name: genai_perf_generation
+      description: GenAI Perf speed evaluation, g...
+    - name: genai_perf_summarization
+      full_name: genai_perf_summarization
+      description: GenAI Perf speed evaluation, s...
+    - name: '2'
+      full_name: '2'
+      description: ''
+  mmath:
+    container: nvcr.io/nvidia/eval-factory/mmath:25.11
+    category: Language Models
+    task_count: 11
+    tasks:
+    - name: mmath_ar
+      full_name: mmath_ar
+      description: Arabic mmath
+    - name: mmath_en
+      full_name: mmath_en
+      description: English mmath
+    - name: mmath_es
+      full_name: mmath_es
+      description: Spanish mmath
+    - name: mmath_fr
+      full_name: mmath_fr
+      description: French mmath
+    - name: mmath_ja
+      full_name: mmath_ja
+      description: Japanese mmath
+    - name: mmath_ko
+      full_name: mmath_ko
+      description: Korean mmath
+    - name: mmath_pt
+      full_name: mmath_pt
+      description: Portuguese mmath
+    - name: mmath_th
+      full_name: mmath_th
+      description: Thai mmath
+    - name: mmath_vi
+      full_name: mmath_vi
+      description: Vietnamese mmath
+    - name: mmath_zh
+      full_name: mmath_zh
+      description: Chinese mmath
+    - name: '10'
+      full_name: '10'
+      description: ''

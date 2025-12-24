@@ -1,0 +1,10 @@
+global:
+  request_timeout: 3600
+  parallelism: 1
+  temperature: 0.0
+  top_p: 0.95
+  max_new_tokens: 2048
+  max_retries: 5
+  limit_samples: 10
+benchmark_overrides: null
+env_vars: null

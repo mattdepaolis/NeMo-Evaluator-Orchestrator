@@ -1,0 +1,108 @@
+# Preset Benchmark Suites
+# Pre-configured collections of benchmarks for common evaluation scenarios
+
+suites:
+  # Quick Suite - Fast benchmarks for testing and validation (5-10 benchmarks)
+  quick:
+    description: "Fast benchmarks for quick model validation and testing"
+    benchmarks:
+      - "ifeval"
+      - "simple_evals.mmlu"
+      - "simple_evals.humaneval"
+      - "simple_evals.mgsm"
+      - "simple_evals.math_test_500"
+    estimated_time: "30-60 minutes"
+    
+  # Language Model Suite - Comprehensive language understanding benchmarks
+  language_models:
+    description: "All language model evaluation benchmarks"
+    benchmarks:
+      - "simple_evals.mmlu"
+      - "simple_evals.mmlu_pro"
+      - "simple_evals.mmlu_en"
+      - "simple_evals.mmlu_ar"
+      - "simple_evals.mmlu_de"
+      - "simple_evals.mmlu_es"
+      - "simple_evals.mmlu_fr"
+      - "simple_evals.mmlu_ja"
+      - "simple_evals.mmlu_zh-lite"
+      - "lm-evaluation-harness.mmlu"
+      - "lm-evaluation-harness.arc_challenge"
+      - "lm-evaluation-harness.hellaswag"
+      - "lm-evaluation-harness.winogrande"
+      - "lm-evaluation-harness.gsm8k"
+      - "lm-evaluation-harness.truthfulqa"
+      - "lm-evaluation-harness.bbh"
+      - "lm-evaluation-harness.agieval"
+      - "lm-evaluation-harness.commonsense_qa"
+      - "mtbench.mtbench"
+    estimated_time: "4-8 hours"
+    
+  # Code Generation Suite - All coding-related benchmarks
+  code_generation:
+    description: "Comprehensive code generation and programming benchmarks"
+    benchmarks:
+      - "simple_evals.humaneval"
+      - "simple_evals.humanevalplus"
+      - "bigcode-evaluation-harness.humaneval"
+      - "bigcode-evaluation-harness.humanevalplus"
+      - "bigcode-evaluation-harness.mbpp"
+      - "bigcode-evaluation-harness.mbppplus"
+      - "livecodebench.codegeneration_release_latest"
+      - "livecodebench.codeexecution_v2"
+      - "scicode.scicode"
+      - "hle.hle"
+      - "bfcl.bfclv3"
+    estimated_time: "3-6 hours"
+    
+  # Math Suite - Mathematical reasoning benchmarks
+  math:
+    description: "Mathematical reasoning and problem-solving benchmarks"
+    benchmarks:
+      - "simple_evals.math_test_500"
+      - "simple_evals.AIME_2024"
+      - "simple_evals.AIME_2025"
+      - "lm-evaluation-harness.gsm8k"
+      - "lm-evaluation-harness.minerva_math"
+      - "mmath.mmath_en"
+      - "mmath.mmath_zh"
+      - "mmath.mmath_ja"
+      - "mmath.mmath_es"
+      - "mmath.mmath_fr"
+    estimated_time: "2-4 hours"
+    
+  # Safety & Security Suite
+  safety:
+    description: "Safety, security, and bias evaluation benchmarks"
+    benchmarks:
+      - "safety_eval.aegis_v2"
+      - "safety_eval.wildguard"
+      - "garak.garak"
+      - "lm-evaluation-harness.bbq"
+    estimated_time: "2-3 hours"
+    
+  # Vision-Language Suite
+  vision_language:
+    description: "Multimodal vision-language understanding benchmarks"
+    benchmarks:
+      - "vlmevalkit.mmmu_judge"
+      - "vlmevalkit.chartqa"
+      - "vlmevalkit.mathvista-mini"
+      - "vlmevalkit.ocrbench"
+      - "vlmevalkit.ai2d_judge"
+      - "vlmevalkit.slidevqa"
+    estimated_time: "3-5 hours"
+    note: "Requires vision-language model endpoint"
+    
+  # Comprehensive Suite - All available benchmarks
+  comprehensive:
+    description: "Complete evaluation across all available benchmarks (318+ benchmarks)"
+    benchmarks: "all"  # Special keyword to include all benchmarks
+    estimated_time: "24-48 hours"
+    note: "This is a very long-running evaluation. Consider running in batches."
+    
+  # Custom Suite - User-defined selection
+  custom:
+    description: "User-defined benchmark selection"
+    benchmarks: []  # To be filled by user
+

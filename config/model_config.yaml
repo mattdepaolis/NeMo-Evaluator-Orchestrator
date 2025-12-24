@@ -1,0 +1,13 @@
+model:
+  endpoint_url: http://localhost:8000/v1/chat/completions
+  model_id: mistralai/Devstral-Small-2-24B-Instruct-2512
+  framework: vllm
+  metadata:
+    model_family: mistralai
+    model_size: unknown
+    quantization: null
+    tensor_parallel_size: 1
+    max_model_len: 4096
+cache:
+  enabled: true
+  preload_datasets: true

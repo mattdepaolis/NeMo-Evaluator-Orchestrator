@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nemo-evaluator-orchestrator"
+version = "1.0.0"
+description = "A comprehensive orchestration tool for evaluating LLMs across 336+ NVIDIA benchmarks"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+authors = [
+    {name = "NeMo Evaluator Orchestrator Contributors"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "nemo-evaluator-launcher[mlflow]",
+    "pyyaml>=6.0",
+    "rich>=13.0",
+    "mlflow>=2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "black>=23.0",
+    "flake8>=6.0",
+    "mypy>=1.0",
+]
+
+[project.scripts]
+nemo-select = "nemo_evaluator_orchestrator.cli._entry_points:select_benchmarks_main"
+nemo-run = "nemo_evaluator_orchestrator.cli._entry_points:run_all_benchmarks_main"
+nemo-monitor = "nemo_evaluator_orchestrator.cli._entry_points:monitor_benchmarks_main"
+nemo-aggregate = "nemo_evaluator_orchestrator.cli._entry_points:aggregate_results_main"
+nemo-containers = "nemo_evaluator_orchestrator.cli._entry_points:manage_containers_main"
+nemo-status = "nemo_evaluator_orchestrator.cli._entry_points:show_system_status_main"
+nemo-catalog = "nemo_evaluator_orchestrator.cli._entry_points:generate_catalog_main"
+nemo-datasets = "nemo_evaluator_orchestrator.cli._entry_points:manage_datasets_main"
+nemo-vllm = "nemo_evaluator_orchestrator.cli._entry_points:setup_vllm_main"
+nemo-mlflow = "nemo_evaluator_orchestrator.cli._entry_points:mlflow_main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["nemo_evaluator_orchestrator", "nemo_evaluator_orchestrator.cli", "nemo_evaluator_orchestrator.utils"]
+
+[tool.setuptools.package-data]
+"*" = ["*.yaml", "*.yml"]
+

@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Build artifacts
+**/*.egg-info/
+build/
+dist/
+*.egg
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+cache/
+mlartifacts/
+output/
+*.db
+*.sqlite
+*.sqlite3
+.env
+.env.local
+
+# Docker and model cache (created by Docker with root ownership)
+model-cache/
+**/model-cache/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
