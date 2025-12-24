@@ -507,47 +507,6 @@ nemo-datasets clear --yes
 nemo-datasets clear --benchmarks simple_evals.mmlu --yes
 ```
 
-### Custom Benchmark Selection
-
-Manually edit `selected_benchmarks.yaml`:
-```yaml
-selected_benchmarks:
-  - "simple_evals.mmlu"
-  - "simple_evals.humaneval"
-  - "ifeval"
-benchmark_count: 3
-```
-
-### Override Configuration at Runtime
-
-```bash
-nemo-evaluator-launcher run \
-    --config config_self_hosted.yaml \
-    -o target.api_endpoint.url=http://localhost:8001/v1/chat/completions \
-    -o execution.output_dir=custom_output \
-    -o evaluation.nemo_evaluator_config.config.params.parallelism=4
-```
-
-### Custom System Prompts
-
-```yaml
-tasks:
-  - name: simple_evals.mmlu
-    nemo_evaluator_config:
-      target:
-        api_endpoint:
-          adapter_config:
-            use_system_prompt: true
-            custom_system_prompt: "You are a helpful assistant."
-```
-
-### Performance Optimization
-
-1. **Enable Caching**: Datasets are cached in `./cache` for faster re-runs
-2. **Adjust Parallelism**: Increase `parallelism` based on server capacity
-3. **Use Limit Samples for Testing**: Test with `limit_samples: 10`, remove for full evaluation
-4. **Monitor Resources**: Use `monitor_benchmarks.py` to track progress
-
 ## Configuration Files
 
 | File | Purpose |
@@ -559,19 +518,6 @@ tasks:
 | `benchmark_catalog.yaml` | Complete benchmark catalog (generated) |
 | `benchmark_suites.yaml` | Preset benchmark suite definitions |
 
-## Enhanced User Experience
-
-### 🚀 **New: Interactive vLLM Setup Workflow**
-
-The biggest improvement is the new interactive vLLM setup that eliminates manual server management:
-
-#### **Enhanced Workflow (with nemo-* commands):**
-```bash
-# Simple, guided setup:
-nemo-vllm setup  # Interactive model and server setup
-nemo-select      # Choose benchmarks interactively
-nemo-run --yes   # Run evaluations with auto-optimization
-```
 
 ### Best Practices
 
